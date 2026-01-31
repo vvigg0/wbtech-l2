@@ -1,0 +1,12 @@
+101	Feb	12.5K	alice	apple
+7	Jan	512	bob	banana
+42	Mar	1.5M	charlie	orange
+7	Jan	512	bob	banana
+3	Dec	10G	dave	pear
+88	Aug	256K	eve	grape
+15	Apr	42	frank	apple
+15	Apr	42	frank	apple
+2	Jul	3.14K	alice	plum
+100	Nov	1T	zack	melon
+9	May	64	hank	kiwi
+50	Jun	128M	ivan	orange

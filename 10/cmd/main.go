@@ -8,7 +8,7 @@ import (
 	"os"
 	"strings"
 
-	mysort "github.com/vvigg0/wbtech-l2/10/pkg/sorttool"
+	mysort "github.com/vvigg0/wbtech-l2/10/internal/sorttool"
 )
 
 func main() {
@@ -66,7 +66,7 @@ func main() {
 		fmt.Println(v)
 	}
 }
-func readFile(src *os.File) ([]string, error) {
+func readFile(src io.Reader) ([]string, error) {
 	var lines []string
 
 	reader := bufio.NewReader(src)

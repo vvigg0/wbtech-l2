@@ -1,0 +1,60 @@
+boot: starting service "alpha"
+cfg: path=/etc/alpha/config.yaml
+cfg: mode=prod
+info: listening on 0.0.0.0:8080
+INFO: healthcheck ok
+warn: cache miss key=user:42
+[WARN] retry=1 reason=timeout
+[WARN] retry=2 reason=timeout
+debug: request_id=abc-001 user_id=42 action=login
+info: user_id=42 login success
+ERROR: db connection failed host=db01
+error: dial tcp 10.0.0.2:5432: i/o timeout
+info: fallback to read replica
+warn: slow query ms=512 user_id=42
+debug: sql=SELECT * FROM users WHERE id=42
+info: request_id=abc-002 user_id=7 action=login
+Info: user_id=7 login success
+info: request_id=abc-003 user_id=13 action=pay
+warn: payment provider latency ms=950
+ERROR: payment declined code=403
+info: request_id=abc-004 user_id=13 action=logout
+debug: metrics cpu=12% mem=128MB
+info: cron started job=cleanup
+info: cleanup removed=0
+warn: cleanup skipped reason=lock
+debug: lock_owner=cleanup@node-1
+error: cannot acquire lock
+info: cron finished job=cleanup
+info: audit: user_id=42 action=read resource=/docs
+info: audit: user_id=42 action=write resource=/docs
+debug: checksum=deadbeef
+info: request_id=abc-005 user_id=42 action=export
+warn: export size=10485760 bytes
+INFO: export finished ok
+info: "terror" is not "error" but contains letters
+debug: word=errors plural should still match substring "error"
+info: regex-demo email=test.user+1@example.com
+info: regex-demo ip=192.168.1.10 port=443
+warn: regex-demo path=/api/v1/users/42
+error: regex-demo timeout=5s
+info: regex-demo timeout=15s
+debug: regex-demo timeout=500ms
+INFO: mixedCase ErRoR should match with -i
+trace: internal event=Tick
+trace: internal event=Tock
+info: request_id=abc-006 user_id=99 action=login
+warn: password attempts=2 user_id=99
+ERROR: password attempts exceeded user_id=99
+info: account locked user_id=99
+debug: unlock scheduled at=2026-02-01T12:00:00Z
+info: separator-test a|b|c|d
+info: separator-test a,b,c,d
+info: bracket-test [WARN] not an error
+warn: something happened but ok
+info: finalizing batch=7
+debug: done
+
+info: trailing empty line above
+error: last error before end
+shutdown: service stopped
